@@ -1,0 +1,19 @@
+:root {
+    --BG: #00060D;
+    --BG2: #1E2124;
+    --BG3: #30363A;
+    --FG: #E4E4EB;
+    --FG2: #B3B3B3;
+    --FG3: #606568;
+    --ACCENT: #7C7FD1;
+    --POSITIVE: #7EE863;
+    --NEGATIVE: #FF2E00;
+    --GRADIENT: linear-gradient(to bottom, #1E2124, #00060D);
+
+    --desktopMaxWidth: 1440px;
+    --desktopMargin: 48px;
+    --tabletMargin: 32px;
+    --mobileMargin: 24px;
+    --tabletBreakpoint: 850px;
+    --mobileBreakpoint: 650px;
+}
