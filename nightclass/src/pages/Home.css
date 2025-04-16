@@ -1,15 +1,20 @@
 .hero {
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 1000px;
-    left: 0;
-    top: 0;
-    background: url(bg1.png);
+    height: calc(60vh - 70px);
+    /* Full viewport height minus the nav bar height */
+    background: url(bg1.png) no-repeat center center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* Center vertically */
     align-items: center;
-    gap: 40px;
+    /* Center horizontally */
+    gap: 20px;
+    /* Reduce gap between elements */
+    margin-top: 0;
+    /* Remove any extra margin */
 }
 
 .hero-content {
@@ -18,7 +23,8 @@
     justify-content: center;
     align-items: center;
     padding: 0;
-    gap: 40px;
+    gap: 20px;
+    /* Reduce gap between title, subtitle, and search bar */
     width: 524px;
     text-align: center;
 }
@@ -27,22 +33,24 @@
     font-family: 'Instrument Serif', serif;
     font-size: 60px;
     font-weight: 400;
-    line-height: 60px;
+    line-height: 1.2;
+    /* Adjust line height to reduce spacing */
     letter-spacing: -1px;
     color: var(--FG);
-    text-align: center;
     margin: 0;
+    /* Remove default margin */
 }
 
 .hero-subtitle {
     font-family: 'Inter', sans-serif;
     font-size: 24px;
     font-weight: 500;
-    line-height: 32px;
+    line-height: 1.3;
+    /* Adjust line height */
     letter-spacing: -0.33px;
     color: var(--FG2);
-    text-align: center;
     margin: 0;
+    /* Remove default margin */
 }
 
 .search-bar {
@@ -50,8 +58,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 16px;
-    width: 524px;
+    gap: 10px;
+    /* Reduce gap between input and button */
+    width: 100%;
+    max-width: 524px;
     height: 100px;
     background: linear-gradient(180deg, rgba(30, 33, 36, 0.36) 0%, rgba(24, 24, 24, 0.36) 100%);
     border: 1px solid var(--BG3);
@@ -95,4 +105,42 @@
 
 .search-button:hover {
     background-color: var(--FG3);
+}
+
+.class-section {
+    width: 100%;
+    padding: 0 48px;
+    /* Add some padding on the sides */
+    box-sizing: border-box;
+}
+
+.class-row {
+    margin: 40px 0;
+}
+
+.class-row-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--FG);
+    margin-bottom: 16px;
+}
+
+.class-row-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    width: 100%;
+    /* Full width */
+}
+
+.class-row-cards::-webkit-scrollbar {
+    height: 8px;
+}
+
+.class-row-cards::-webkit-scrollbar-thumb {
+    background: var(--BG3);
+    border-radius: 4px;
 }
