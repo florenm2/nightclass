@@ -1,0 +1,32 @@
+.course-row {
+    margin: 40px 0;
+}
+
+.course-row-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--FG);
+    margin-bottom: 16px;
+    line-height: 40px;
+    letter-spacing: -0.33px;
+    vertical-align: bottom;
+}
+
+
+.course-row-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
+
+.course-row-cards::-webkit-scrollbar {
+    height: 8px;
+}
+
+.course-row-cards::-webkit-scrollbar-thumb {
+    background: var(--BG3);
+    border-radius: 4px;
+}

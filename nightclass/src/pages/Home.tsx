@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
-import ClassRow from '../components/ClassRow';
-import classData from '../data/classData';
+import CourseRow from '../components/CourseRow';
+import courseData from '../data/courseData';
 
 const Home = () => {
     return (
@@ -16,10 +16,26 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="class-section">
-                {classData.map((row) => (
-                    <ClassRow key={row.title} title={row.title} classes={row.classes} />
-                ))}
+            <div className="home-section-container">
+                <div className="home-section">
+                    {courseData.map((row) => (
+                        <CourseRow key={row.title} title={row.title} courses={row.courses} />
+                    ))}
+                </div>
+                <div className="home-section">
+                    <h2 className="section-title">All classes</h2>
+                    <div className="all-courses-content">
+                        <p>TODO: All Classes</p>
+                    </div>
+                </div>
+                <div className="home-section-container">
+                    <div className="faq-content">
+                        <p>TODO: FAQ's</p>
+                    </div>
+                </div>
+            </div>
+            <div className="bottom-search">
+                <p>TODO: Meet new people & learn new things</p>
             </div>
         </>
     );

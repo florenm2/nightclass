@@ -1,0 +1,120 @@
+.footer {
+    width: 1443px;
+    height: 324px;
+    border-top: 1px solid var(--BG3);
+    padding: 40px 48px;
+    gap: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--BG2);
+    color: var(--FG);
+}
+
+.footer-content {
+    width: 1200px;
+    height: 244px;
+    max-width: 1200px;
+    display: flex;
+    gap: 80px;
+}
+
+.footer-left {
+    width: 223px;
+    height: 244px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Align items to the top */
+    padding-top: 8px;
+}
+
+.footer-logo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--FG);
+    text-align: center;
+    margin-bottom: 8px;
+    /* Add spacing below the logo */
+}
+
+.footer-tagline {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--FG2);
+    margin-bottom: 16px;
+    /* Add spacing below the tagline */
+}
+
+.footer-copyright {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.footer-links,
+.footer-company,
+.footer-social {
+    width: 200px;
+}
+
+.footer-section-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--FG);
+    margin-bottom: 8px;
+}
+
+.footer-class-list,
+.footer-company-list,
+.footer-social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-class-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 16px;
+}
+
+.footer-class-list li,
+.footer-company-list li,
+.footer-social-list li {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--FG2);
+}
+
+.footer-class-list li:hover,
+.footer-company-list li a:hover,
+.footer-social-list li a:hover {
+    color: var(--ACCENT);
+}
+
+.footer-company-list li a,
+.footer-social-list li a {
+    text-decoration: none;
+    color: var(--FG2);
+}

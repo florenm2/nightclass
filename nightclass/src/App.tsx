@@ -1,16 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Teach from './pages/Teach';
 import Contact from './pages/Contact';
+import Footer from './components/Footer';
 import './App.css';
 
 const App: React.FC = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <Router>
       <div>
-        <nav>
+        <nav className={`nav-header ${scrolled ? 'scrolled' : ''}`}>
           <div className="nav-left">
             <Link to="/" className="logo">Nightclass</Link>
           </div>
@@ -41,6 +53,8 @@ const App: React.FC = () => {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
+
+        <Footer />
       </div>
     </Router>
   );
