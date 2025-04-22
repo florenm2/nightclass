@@ -2,6 +2,8 @@ import React from 'react';
 import './Home.css';
 import CourseRow from '../components/CourseRow';
 import courseData from '../data/courseData';
+import AllCourses from './AllCourses';
+
 
 const Home = () => {
     return (
@@ -25,7 +27,7 @@ const Home = () => {
                 <div className="home-section">
                     <h2 className="section-title">All classes</h2>
                     <div className="all-courses-content">
-                        <p>TODO: All Classes</p>
+                        <AllCourses />
                     </div>
                 </div>
                 <div className="home-section-container">

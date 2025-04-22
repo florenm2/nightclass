@@ -5,10 +5,13 @@ import About from './pages/About';
 import Teach from './pages/Teach';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
+import Modal from './components/Modal';
 import './App.css';
 
 const App: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalTitle, setModalTitle] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +21,15 @@ const App: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const openModal = (title: string) => {
+    setModalTitle(title);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <Router>
@@ -37,10 +49,10 @@ const App: React.FC = () => {
               <Link to="/contact">Contact</Link>
             </li>
             <li>
-              <Link to="/login">Log In</Link>
+              <Link to="#" onClick={() => openModal('Log In')} className="nav-link">Log In</Link>
             </li>
             <li>
-              <button className="sign-up-button">Sign Up</button>
+              <button onClick={() => openModal('Sign Up')} className="sign-up-button">Sign Up</button>
             </li>
           </ul>
         </nav>
@@ -55,6 +67,13 @@ const App: React.FC = () => {
         </div>
 
         <Footer />
+
+        <Modal
+          isOpen={isModalOpen}
+          onClose={closeModal}
+          title={modalTitle}
+          subtitle="Subtitle placeholder"
+        />
       </div>
     </Router>
   );

@@ -1,0 +1,46 @@
+.all-courses-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Default: 3 columns - fix this */
+    gap: 16px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.all-courses-container .all-courses-card:nth-child(4) {
+    grid-column: span 1;
+}
+
+.all-courses-container .all-courses-card:nth-child(4),
+.all-courses-container .all-courses-card:nth-child(5),
+.all-courses-container .all-courses-card:nth-child(6),
+.all-courses-container .all-courses-card:nth-child(7) {
+    grid-column: span 1;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.all-courses-card {
+    height: 119px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--FG);
+    background-color: var(--BG2);
+    border: 1px solid var(--FG2);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.all-courses-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
